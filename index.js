@@ -14,9 +14,9 @@ app.use( express.static('public') );
 //Lectura y parseo del body
 app.use( express.json() );
 //Rutas
-app.use('/api/auth', require('./api/auth') );
-app.use('/api', require('./api/messages'));
-app.use('/api/group', require('./api/group'));
+app.use('/auth', require('./api/auth') );
+app.use('/', require('./api/messages'));
+app.use('/group', require('./api/group'));
 
 
 const port = process.env.PORT || 4000
