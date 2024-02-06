@@ -8,7 +8,9 @@ const app = express();
 //Base de datos
 dbConnection();
 //Cors
-app.use(cors())
+app.use(cors({
+    origin:'https://questions-ai.vercel.app'
+}))
 //Directorio publico
 app.use( express.static('public') );
 //Lectura y parseo del body
